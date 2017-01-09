@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.as.mymediaplayer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10.0dip">
+        <TextView
+            android:id="@+id/title"
+            android:text="多媒体播放器"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18.0dip"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SurfaceView
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/surfaceview">
+        </SurfaceView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5.0dip">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rew"
+            android:src="@drawable/ic_media_rew"/>
+
+        <ImageButton
+            android:layout_marginLeft="10.0dip"
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_media_pause"/>
+
+        <ImageButton
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_media_play"
+            android:visibility="visible"/>
+
+        <ImageButton
+            android:id="@+id/ff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_media_ff"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10.0dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/play_time"
+            android:text="00:00"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:textSize="15.0dip"
+            android:layout_height="wrap_content">
+        </TextView>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"/>
+
+        <TextView
+            android:id="@+id/all_time"
+            android:text="04:32"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5.0dip"
+            android:textSize="15.0dip"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+</LinearLayout >
